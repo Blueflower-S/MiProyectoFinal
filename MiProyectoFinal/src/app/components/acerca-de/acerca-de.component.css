@@ -1,0 +1,47 @@
+.row{
+  padding: 15px;
+}
+
+div{
+  background-color: rgb(166, 197, 224);
+  text-align: left;
+  margin-top: 5px;
+}
+
+
+@media (min-width:576px){
+  #mifoto {
+    position: absolute;
+    width: 15%;
+    border-radius: 20%;
+    left: 1%;
+    top: 300px;
+    
+  }
+
+}
+
+@media (max-width:575px){
+  #mifoto {
+    position: absolute;
+    width: 15%;
+    border-radius: 20%;
+    left: 1%;
+    top: 300px;
+    
+  }
+
+}
+
+#nombre {
+  font-size:large;
+  font-weight: bold;
+  margin-top: 10%;
+  text-align: center;
+  
+}
+
+#posicion{
+  text-align: center;
+  font-size: small;
+}
