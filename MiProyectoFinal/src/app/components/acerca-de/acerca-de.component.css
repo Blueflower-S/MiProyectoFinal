@@ -15,7 +15,8 @@ div{
     width: 15%;
     border-radius: 20%;
     left: 1%;
-    top: 300px;
+    top: 260px;
+    
     
   }
 
@@ -26,7 +27,7 @@ div{
     position: absolute;
     width: 15%;
     border-radius: 20%;
-    left: 1%;
+    left: 40%;
     top: 300px;
     
   }
@@ -34,14 +35,23 @@ div{
 }
 
 #nombre {
-  font-size:large;
+  font-size:xx-large;
   font-weight: bold;
-  margin-top: 10%;
+  margin-top: 5px;
   text-align: center;
+ 
   
 }
 
 #posicion{
   text-align: center;
   font-size: small;
+}
+
+h2 {
+  text-align: center;
+}
+
+#acercademi {
+  text-align: center;
 }
