@@ -1,0 +1,32 @@
+.row {
+  padding: 20px;
+  
+
+}
+
+div{
+  background-color: rgb(186, 165, 213);
+  margin-top: 5px;
+}
+
+
+h5, h6  {
+
+  display: inline;
+}
+
+
+.descripcion1, .descripcion2 {
+  text-align: justify;
+  display: inline-block;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+.container {
+  padding: 20px;
+  margin-left: 50px;
+}

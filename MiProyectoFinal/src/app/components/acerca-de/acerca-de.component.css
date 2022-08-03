@@ -3,7 +3,7 @@
 }
 
 div{
-  background-color: rgb(166, 197, 224);
+  background-color: rgb(186, 165, 213);
   text-align: left;
   margin-top: 5px;
 }
@@ -14,8 +14,9 @@ div{
     position: absolute;
     width: 15%;
     border-radius: 20%;
-    left: 1%;
+    left: 2%;
     top: 260px;
+    box-shadow: 5px 5px black;
     
     
   }
@@ -29,6 +30,7 @@ div{
     border-radius: 20%;
     left: 40%;
     top: 300px;
+    box-shadow: 5px 5px 20px black
     
   }
 
