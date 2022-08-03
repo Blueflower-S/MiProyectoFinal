@@ -1,12 +1,13 @@
 .row {
   padding: 20px;
-  
+  background-color: rgb(186, 165, 213);
 
 }
 
 div{
-  background-color: rgb(186, 165, 213);
+ 
   margin-top: 5px;
+  padding: 10px;
 }
 
 
@@ -21,12 +22,10 @@ h5, h6  {
   display: inline-block;
 }
 
-img {
-  height: 50%;
-  width: 50%;
-}
+
 
 .container {
-  padding: 20px;
-  margin-left: 50px;
-}
+  width: auto;
+  }
+
+  

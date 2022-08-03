@@ -1,0 +1,23 @@
+.row {
+  padding: 10px;
+
+
+}
+
+div{
+  background-color: rgb(186, 165, 213);
+  margin-top: 5px;
+
+  
+}
+
+h6 {
+  font-size: xx-small;
+  text-align: center;
+}
+
+img {
+  height:5%;
+  width: 5%;
+  margin-left: 2%;
+}
