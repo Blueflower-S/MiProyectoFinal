@@ -20,11 +20,11 @@ public class SExperiencia {
         return rExperiencia.findAll();
     }
     
-    public Optional <Experiencia> getOne(int id){
+    public Optional<Experiencia> getOne(int id){
         return rExperiencia.findById(id);
     }
     
-    public Optional <Experiencia> getByNombreE(String nombreE){
+    public Optional<Experiencia> getByNombreE(String nombreE){
         return rExperiencia.findByNombreE(nombreE);
     }
     

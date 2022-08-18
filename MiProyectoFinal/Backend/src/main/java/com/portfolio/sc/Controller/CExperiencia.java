@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,17 @@ public class CExperiencia {
         
     }
     
+    //
+    
+    @GetMapping("/detail/{id}")
+   public ResponseEntity<Experiencia>getById(@PathVariable("id") int id) {
+    if(!sExperiencia.existsById(id))
+            return new ResponseEntity(new Mensaje("ID no existe"), HttpStatus.NOT_FOUND);
+    Experiencia experiencia = sExperiencia.getOne(id).get();
+    return new ResponseEntity(experiencia,HttpStatus.OK);
+        
+    }
+    
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp) {
         if(StringUtils.isBlank(dtoexp.getNombreE()))
@@ -48,7 +60,7 @@ public class CExperiencia {
     }
     
     
-    @PutMapping("/update/id")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         if(!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("ID no existe"), HttpStatus.BAD_REQUEST);
@@ -68,28 +80,23 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
     }
     
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
        
-        if(!sExperiencia.existsById(id))
-            return new ResponseEntity(new Mensaje("ID no existe"), HttpStatus.BAD_REQUEST);
-        
+        if(!sExperiencia.existsById(id)){
+            return new ResponseEntity(new Mensaje("ID no existe"), HttpStatus.NOT_FOUND);
+        }
         sExperiencia.delete(id);
         
         return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
+                
+    }
+      
+    
+    
+  
         
         
     }
     
-    //
-    
-   @GetMapping("/detail/{id}")
-   public ResponseEntity<Experiencia>getById(@PathVariable("id") int id) {
-    if(!sExperiencia.existsById(id))
-            return new ResponseEntity(new Mensaje("ID no existe"), HttpStatus.NOT_FOUND);
-    Experiencia experiencia = sExperiencia.getOne(id).get();
-    return new ResponseEntity(experiencia,HttpStatus.OK);
-        
-    }
-   
 
-}

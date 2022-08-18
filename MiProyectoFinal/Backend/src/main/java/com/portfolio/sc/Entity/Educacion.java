@@ -1,27 +1,38 @@
 
-package com.portfolio.sc.Dto;
+package com.portfolio.sc.Entity;
 
-import javax.validation.constraints.NotBlank;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
-
-public class dtoExperiencia {
-    @NotBlank
+@Entity 
+public class Educacion {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String nombreE;
-    @NotBlank
     private String descripcionE;
     
     //
 
-    public dtoExperiencia() {
+    public Educacion() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
-    
     //
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNombreE() {
         return nombreE;
@@ -38,7 +49,5 @@ public class dtoExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
     
 }

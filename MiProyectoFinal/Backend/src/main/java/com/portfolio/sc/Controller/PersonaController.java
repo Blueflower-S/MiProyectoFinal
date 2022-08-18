@@ -28,6 +28,15 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
     
+    //
+    
+    @GetMapping("/personas/traer/perfil")
+    public Persona findPersona() {
+        return ipersonaService.findPersona((long)1);
+    }
+    
+    //
+    
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
@@ -59,6 +68,6 @@ public class PersonaController {
     }
     
    
-    
+        
     
 }
